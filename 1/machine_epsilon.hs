@@ -12,8 +12,7 @@ machineEpsilon'' :: Double
 machineEpsilon'' = 2 * until (liftM2 (.) (==) (+) 1) (/ 2) 1
 
 main :: IO ()
-main = mapM_ print
-  [ machineEpsilon
-  , machineEpsilon'
-  , machineEpsilon''
-  ]
+main = mapM_ print [ machineEpsilon
+                   , machineEpsilon'
+                   , machineEpsilon''
+                   ]
